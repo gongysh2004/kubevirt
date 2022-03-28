@@ -52,7 +52,7 @@ KUBEVIRT_CRI="$(determine_cri_bin)"
 
 function build_func_tests() {
     mkdir -p "${TESTS_OUT_DIR}/"
-    GOPROXY=off \
+    GOPROXY=https://goproxy.cn \
         go test -c "${KUBEVIRT_DIR}/tests" -o "${TESTS_OUT_DIR}/tests.test"
 }
 
@@ -91,7 +91,7 @@ function kubevirt_version() {
 KUBEVIRT_VERSION="$(kubevirt_version)"
 
 function go_build() {
-    GOPROXY=off go build "$@"
+    GOPROXY=https://goproxy.cn go build "$@"
 }
 
 # Use this environment variable to set a local path to a custom CA certificate for

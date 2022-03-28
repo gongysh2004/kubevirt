@@ -322,9 +322,10 @@ container_pull(
 # Pull go_image_base
 container_pull(
     name = "go_image_base",
-    digest = "sha256:f65536ce108fcc41cdcd5cb101006fcb82b9a1527409263feb9e34032f00bda0",
-    registry = "gcr.io",
-    repository = "distroless/base",
+    digest = "sha256:2ecf8c8d15a72dca379a8e2257dd68f10d9a2f58149440aa820ccfa57f16fcf9",
+    registry = "index.docker.io",
+    repository = "gongysh2004/distroless.base",
+    tag = "v1",
 )
 
 container_pull(

@@ -183,6 +183,7 @@ container_image(
         "//conditions:default": "amd64",
     }),
     base = ":version-container",
+    creation_time = "1648349854",
     entrypoint = ["/usr/bin/virt-launcher"],
     tars = [":setcaps"],
     visibility = ["//visibility:public"],
