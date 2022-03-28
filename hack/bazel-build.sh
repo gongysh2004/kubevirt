@@ -32,6 +32,7 @@ mkdir -p ${CMD_OUT_DIR}/cluster-profiler
 
 # Build all binaries for amd64
 bazel build \
+    -c dbg \
     --config=${ARCHITECTURE} \
     //tools/csv-generator/... \
     //tools/perfscale-audit/... \
